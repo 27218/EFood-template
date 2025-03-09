@@ -10,7 +10,6 @@
 
 <header class="header container">
 	<a href="#" class="header__logo logo">
-		<!-- I recommend you to specify width & height of the images -->
 		<img width="106" height="39" src="images/logo.svg" alt="EFood" class="logo__image">
 	</a>
 	<label class="header__burger-button burger-button">
@@ -64,9 +63,26 @@
 	</nav>
 </header>
 
-<div class="container">
-	<h1>hello world</h1>
-</div>
+<main class="main">
+	<section class="section container">
+		<div class="section__body">
+			<!-- instead of a modifier 'section__title--large' I use h1 (see _globals.scss) -->
+			<h1 class="section__title">Super Fast <span>Food Delivery</span> Service</h1>
+			<p class="section__text">We provide super fast-delivery service. Let’s use our services right now and get discounts of up to 50%</p>
+
+			<!-- or 'section__cta'... -->
+			<div class="section__buttons">
+				<!-- <button> has type="submit" by default -->
+				<button class="section__button button" type="button">Sign Up</button>
+				<a class="section__link" href="#">Download App</a>
+			</div>
+		</div>
+
+		<!-- Always specify width & height! By the time the image is loaded, it will already take up the required space -->
+		<!-- btw i took them from the viewBox attribute, not from Figma -->
+		<img class="section__image" src="images/hero.svg" alt="Food delivery man on a motorcycle" width="733" height="682">
+	</section>
+</main>
 
 </body>
 </html>
