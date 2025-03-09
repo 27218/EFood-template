@@ -1,0 +1,34 @@
+body {
+	font-family: 'Rubik', sans-serif;
+
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.5;
+
+	color: var(--color-dark);
+	background-color: #F9FAFF;
+}
+
+a, button, input, textarea, label, svg * {
+	transition-duration: var(--transition-duration);
+}
+
+h1 {
+	font-size: fluid(66, 43, $tablet);
+	line-height: 1.18;
+	font-weight: 500;
+}
+h2 {
+	font-size: fluid(36, 23, $tablet);
+	line-height: 1.4; // 1.19, 1.39, 0.83
+	font-weight: 500;
+}
+h3 {
+	font-size: fluid(20, 18, $tablet);
+	line-height: 1.18;
+	font-weight: 400;
+}
+p  {
+	font-size: fluid(20, 16, $tablet);
+	line-height: 1.5; // 1.2
+}

@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+fieldset {
+  border: none;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+[fill]:not([fill=none], [fill^=url]) {
+  fill: currentColor;
+}
+
+[stroke]:not([stroke=none], [stroke^=url]) {
+  stroke: currentColor;
+}
+
+svg * {
+  transition-property: fill, stroke;
+}
+
+button, input, select, textarea, address {
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p,
+ul, ol, dl, dd,
+blockquote, figure, fieldset,
+body {
+  margin: 0;
+}
+
+ul, ol, fieldset {
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-dark);
+  background-color: #F9FAFF;
+}
+
+a, button, input, textarea, label, svg * {
+  transition-duration: var(--transition-duration);
+}
+
+h1 {
+  font-size: clamp(43px, 2.2586605081px + 5.311778291vw, 66px);
+  line-height: 1.18;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(23px, -0.0277136259px + 3.0023094688vw, 36px);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: clamp(18px, 14.4572748268px + 0.4618937644vw, 20px);
+  line-height: 1.18;
+  font-weight: 400;
+}
+
+p {
+  font-size: clamp(16px, 8.9145496536px + 0.9237875289vw, 20px);
+  line-height: 1.5;
+}
+
+:root {
+  --color-dark: #363853;
+  --color-light: #FFFFFF;
+  --color-accent: #FF7A50;
+  /* 
+  You can also do "--clr-accent-400" - Kevin Powell https://youtu.be/h3bTwCqX4ns?list=PL4-IK0AVhVjNDRHoXGort7sDWcna8cGPA&t=1617
+  - accent - orange
+  - neutral - white (100) / black (900)
+  */
+  --container-width: 1200px;
+  --container-padding-x: 15px;
+  --section-padding-y: 62px;
+  --transition-duration: .2s;
+}
+
+/* 
+Not in variables:
+#37383D - footer
+#646464 - copyright
+#7B7B7B - left arrow (reviews)
+#969696 - footer <hr>
+#AAAAAA - text "Food lover"
+#DDDDDD - quote (reviews)
+#D1D2DC - left arrow (category)
+#EEEEEF - socials bg
++ some elements have an 'opacity' option
+*/
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+.hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  -webkit-clip-path: inset(100%) !important;
+          clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}/*# sourceMappingURL=style.css.map */

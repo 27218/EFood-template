@@ -1,0 +1,29 @@
+:root {
+	--color-dark: #363853;
+	--color-light: #FFFFFF;
+	--color-accent: #FF7A50;
+
+	/* 
+	You can also do "--clr-accent-400" - Kevin Powell https://youtu.be/h3bTwCqX4ns?list=PL4-IK0AVhVjNDRHoXGort7sDWcna8cGPA&t=1617
+	- accent - orange
+	- neutral - white (100) / black (900)
+	*/
+	--container-width: 1200px;
+	--container-padding-x: 15px;
+
+	--section-padding-y: 62px;
+	--transition-duration: .2s;
+}
+
+/* 
+Not in variables:
+#37383D - footer
+#646464 - copyright
+#7B7B7B - left arrow (reviews)
+#969696 - footer <hr>
+#AAAAAA - text "Food lover"
+#DDDDDD - quote (reviews)
+#D1D2DC - left arrow (category)
+#EEEEEF - socials bg
++ some elements have an 'opacity' option
+*/

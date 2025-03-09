@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+fieldset {
+	border: none;
+}
+img, video, svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+
+[fill]:not([fill="none"], [fill^="url"]) {fill: currentColor}
+[stroke]:not([stroke="none"], [stroke^="url"]) {stroke: currentColor}
+svg * {
+	transition-property: fill, stroke; // Fix the delay in color change
+}
+
+
+
+button, input, select, textarea, address {
+	font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p,
+ul, ol, dl, dd,
+blockquote, figure, fieldset,
+body {
+	margin: 0;
+}
+ul, ol, fieldset {
+	padding: 0;
+}
+
+
+
+html {
+	// scrollbar-gutter: stable;
+	scroll-behavior: smooth;
+}

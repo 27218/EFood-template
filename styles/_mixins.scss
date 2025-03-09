@@ -1,0 +1,48 @@
+// Syntax: fluid(desktop_value, mobile_value, $breakpoint)
+@function fluid($max, $min: $max, $minWidth) {
+	// @return clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+
+	// https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#aa-step-4
+	$maxWidth: 1200; // Container width
+	$minWidth: $minWidth / 1px; // To be able to use $laptop variables
+
+	$slope: ($max - $min) / ($maxWidth - $minWidth);
+	$y: $min - $minWidth * $slope;
+
+	@return clamp(#{$min}px, #{$y}px + #{$slope * 100}vw, #{$max}px);
+}
+
+@function hex-opacity($hex, $opacity) {
+	@return rgb(from $hex r g b / $opacity);
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin abs-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+}
+
+@mixin square($size) {
+	width: $size;
+	aspect-ratio: 1;
+}
+
+@mixin hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	white-space: nowrap !important;
+	clip-path: inset(100%) !important;
+	clip: rect(0 0 0 0) !important;
+	overflow: hidden !important;
+}
