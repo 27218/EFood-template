@@ -1,11 +1,20 @@
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	column-gap: fluid(60, 15, $tablet);
-	
-	padding-top: fluid(54, 30, $tablet);
+	padding-block: fluid(20, 10, $tablet);
 	font-size: fluid(18, 16, $tablet); // width 1200 to 767 => font-size 18 to 16
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	background-color: #fff3;
+	backdrop-filter: blur(30px);
+	z-index: 1;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: fluid(60, 15, $tablet);
+	}
 
 	&__menu {
 		margin-left: auto;
