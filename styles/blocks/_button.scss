@@ -12,4 +12,9 @@
 	@include hover {
 		opacity: 0.6;
 	}
+
+	&--round {
+		padding: 17px 44px;
+		border-radius: 99px 99px 0;
+	}
 }

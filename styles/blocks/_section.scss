@@ -4,12 +4,19 @@
 	grid-auto-columns: 1fr;
 	grid-auto-flow: column;
 
-	padding-block: fluid(90, 45, $tablet);
+	padding-block: 50px;
 
 
+	&__body {
+		@include flex-column(30px);
+	}
 
 	&__body--left {
 		max-width: 530px;
+	}
+	&__body--right {
+		max-width: 450px;
+		justify-self: end;
 	}
 
 	&__title {
@@ -32,21 +39,25 @@
 		font-size: fluid(20, 16, $tablet);
 	}
 
-	&__link {
-		text-decoration: underline;
+	&__button {
+		align-self: start;
+	}
+
+	&__list {
+		@include flex-column(fluid(25, 15, $tablet));
+		font-size: fluid(24, 18, $tablet);
+
+		&-item {
+			display: flex;
+			align-items: center;
+			column-gap: 26px;
+		}
+		&-icon {
+			@include square(40px);
+		}
 	}
 
 
-
-	// add margin-bottom to title & text (large screen)
-	@include tablet-above {
-		&__title {
-			margin-bottom: 30px;
-		}
-		&__text {
-			margin-bottom: fluid(40, 25, $tablet);
-		}
-	}
 
 	// relayout (small screen)
 	@include tablet {
