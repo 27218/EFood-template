@@ -1,0 +1,126 @@
+.tabs {
+	@include flex-column(40px);
+
+	&__buttons {
+		@include auto-grid(200px, 15px);
+		grid-auto-rows: 70px;
+
+		&:has(:focus-visible) {
+			outline: 1px auto -webkit-focus-ring-color; // a11y
+		}
+	}
+	&__button {
+		@include flex-center;
+		column-gap: 8px;
+
+		border-radius: 8px;
+		background-color: var(--color-light);
+
+		input {
+			@include hidden;
+		}
+		svg {
+			flex-shrink: 0;
+		}
+	}
+	&__button:has(input:checked) {
+		color: var(--color-light);
+		background-color: var(--color-accent);
+		box-shadow: 0 4px 12px #0002;
+	}
+	&__button:not(:has(input:checked)) {
+		@include hover {
+			opacity: 0.6;
+		}
+	}
+
+
+
+	&__items {
+		@include auto-grid(200px, 15px);
+	}
+
+
+
+	&__pagination {
+		// There is no need to use 'align-items: center', so I don't use '@include flex-center';
+		display: flex;
+		justify-content: center;
+		column-gap: 25px;
+
+		&-button {
+			@include square(34px);
+			@include flex-center;
+
+			border-radius: 50%;
+
+			color: var(--color-accent);
+			background-color: var(--color-light);
+			border: 2px solid var(--color-accent);
+
+			@include hover {
+				color: var(--color-light);
+				background-color: var(--color-accent);
+			}
+
+			&[disabled] {
+				color: #D1D2DC;
+				background-color: var(--color-light);
+				border-color: #D1D2DC;
+				cursor: not-allowed;
+			}
+
+			&::before {
+				content: '';
+				@include square(11px);
+
+				border-top: 2px solid currentColor;
+				border-left: 2px solid currentColor;
+				rotate: -45deg;
+				translate: 2.5px 0;
+			}
+
+			&--next {
+				&::before {
+					rotate: 135deg;
+					translate: -2.5px 0;
+				}
+			}
+		}
+
+		&-list {
+			display: flex;
+			justify-content: center;
+		}
+		&-item {
+			display: flex; // so that <li> doesn't stretch vertically: it by default has 'display: list-item'
+		}
+		&-indicator {
+			@include square(24px); // Expanded clickable area - a11y
+
+			border: none;
+			background: none;
+
+			@include hover {
+				&::before {
+					background-color: var(--color-accent);
+				}
+			}
+
+			&::before {
+				content: '';
+
+				display: block;
+				aspect-ratio: 1;
+				border-radius: 50%;
+				background-color: #D1D2DC;
+
+				transition-duration: var(--transition-duration);
+			}
+
+			&.active::before {
+				background-color: var(--color-accent);
+			}
+		}
+	}
+}

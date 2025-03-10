@@ -16,11 +16,32 @@
 	@return rgb(from $hex r g b / $opacity);
 }
 
+
+
 @mixin flex-center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
+@mixin flex-column($row-gap: 0) {
+	display: flex;
+	flex-direction: column;
+	@if $row-gap != 0 {
+		row-gap: $row-gap;
+	}
+}
+
+// Kevin Powell, layouts: https://youtu.be/p3_xN2Zp1TY?t=107
+@mixin auto-grid($min-width, $gap: 0) {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min($min-width, 100%), 1fr));
+	@if $gap != 0 {
+		gap: $gap;
+	}
+}
+
+
 
 @mixin abs-center {
 	position: absolute;
