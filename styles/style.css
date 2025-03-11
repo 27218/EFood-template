@@ -415,6 +415,11 @@ input:checked + .burger-button__visuals::after {
 .section__title {
   text-transform: capitalize;
 }
+@media (max-width: 767px) {
+  .section__title {
+    text-align: center;
+  }
+}
 .section__title--center {
   text-align: center;
 }
@@ -427,6 +432,11 @@ input:checked + .burger-button__visuals::after {
   -moz-column-gap: 30px;
        column-gap: 30px;
   font-size: clamp(16px, 8.9145496536px + 0.9237875289vw, 20px);
+}
+@media (max-width: 767px) {
+  .section__buttons {
+    justify-content: center;
+  }
 }
 .section__button {
   align-self: start;
@@ -657,10 +667,10 @@ input:checked + .burger-button__visuals::after {
 
 .restaurant {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: 43px;
+  grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr));
+  gap: clamp(30px, -48.7647058824px + 7.6470588235vw, 43px);
 }
-@media (max-width: 767px) {
+@media (width < 620px) {
   .restaurant {
     margin-inline: auto;
   }
@@ -676,7 +686,7 @@ input:checked + .burger-button__visuals::after {
 .restaurant__content {
   display: grid;
   grid: auto auto/auto auto;
-  gap: 10px 27px;
+  gap: 10px clamp(15px, -57.7058823529px + 7.0588235294vw, 27px);
   padding: 20px 30px 20px 20px;
 }
 .restaurant__title {
@@ -689,7 +699,7 @@ input:checked + .burger-button__visuals::after {
   align-items: center;
   justify-content: space-between;
   max-width: 200px;
-  font-size: 18px;
+  font-size: clamp(15px, -3.1764705882px + 1.7647058824vw, 18px);
   font-weight: 300;
 }
 .restaurant__button {

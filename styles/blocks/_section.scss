@@ -23,6 +23,10 @@
 	&__title {
 		text-transform: capitalize;
 
+		@include tablet {
+			text-align: center;
+		}
+
 		&--center {
 			text-align: center;
 		}
@@ -38,6 +42,10 @@
 		column-gap: 30px;
 
 		font-size: fluid(20, 16, $tablet);
+
+		@include tablet {
+			justify-content: center;
+		}
 	}
 
 	&__button {
