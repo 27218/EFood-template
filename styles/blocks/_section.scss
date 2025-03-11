@@ -7,16 +7,17 @@
 	padding-block: 50px;
 
 
+
 	&__body {
 		@include flex-column(30px);
-	}
 
-	&__body--left {
-		max-width: 530px;
-	}
-	&__body--right {
-		max-width: 450px;
-		justify-self: end;
+		&--left {
+			max-width: 530px;
+		}
+		&--right {
+			max-width: 450px;
+			justify-self: end;
+		}
 	}
 
 	&__title {
@@ -41,20 +42,6 @@
 
 	&__button {
 		align-self: start;
-	}
-
-	&__list {
-		@include flex-column(fluid(25, 15, $tablet));
-		font-size: fluid(24, 18, $tablet);
-
-		&-item {
-			display: flex;
-			align-items: center;
-			column-gap: 26px;
-		}
-		&-icon {
-			@include square(40px);
-		}
 	}
 
 

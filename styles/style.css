@@ -1,5 +1,12 @@
 @font-face {
   font-family: "Rubik";
+  src: url("../fonts/Rubik-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rubik";
   src: url("../fonts/Rubik-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -77,7 +84,7 @@ body {
   font-size: 20px;
   line-height: 1.5;
   color: var(--color-dark);
-  background-color: #F9FAFF;
+  background-color: hsl(230, 100%, 98.5%);
 }
 
 a, button, input, textarea, label, svg * {
@@ -424,22 +431,6 @@ input:checked + .burger-button__visuals::after {
 .section__button {
   align-self: start;
 }
-.section__list {
-  display: flex;
-  flex-direction: column;
-  row-gap: clamp(15px, -2.7136258661px + 2.3094688222vw, 25px);
-  font-size: clamp(18px, 7.3718244804px + 1.3856812933vw, 24px);
-}
-.section__list-item {
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 26px;
-       column-gap: 26px;
-}
-.section__list-icon {
-  width: 40px;
-  aspect-ratio: 1;
-}
 @media (max-width: 767px) {
   .section {
     max-width: 600px;
@@ -645,4 +636,65 @@ input:checked + .burger-button__visuals::after {
 
 .main {
   padding-top: clamp(60px, -10.8545034642px + 9.2378752887vw, 100px);
+}
+
+.icon-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(15px, -2.7136258661px + 2.3094688222vw, 25px);
+  font-size: clamp(18px, 7.3718244804px + 1.3856812933vw, 24px);
+}
+.icon-list-item {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 26px;
+       column-gap: 26px;
+}
+.icon-list-icon {
+  width: 40px;
+  aspect-ratio: 1;
+}
+
+.restaurant {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 43px;
+}
+@media (max-width: 767px) {
+  .restaurant {
+    margin-inline: auto;
+  }
+}
+.restaurant__item {
+  border-radius: 53px 0 53px;
+  overflow: hidden;
+  background-color: var(--color-light);
+}
+.restaurant__image {
+  width: 100%;
+}
+.restaurant__content {
+  display: grid;
+  grid: auto auto/auto auto;
+  gap: 10px 27px;
+  padding: 20px 30px 20px 20px;
+}
+.restaurant__title {
+  font-size: 24px;
+  font-weight: 400;
+  grid-column: 1/-1;
+}
+.restaurant__time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 200px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.restaurant__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px;
 }/*# sourceMappingURL=style.css.map */
