@@ -707,4 +707,105 @@ input:checked + .burger-button__visuals::after {
   justify-content: center;
   align-items: center;
   padding: 11px;
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .reviews {
+    flex-direction: column;
+    row-gap: 25px;
+  }
+}
+.reviews__image {
+  border-radius: 24px;
+  max-width: clamp(250px, -74.1593533487px + 42.2632794457vw, 433px);
+}
+.reviews__body {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  row-gap: clamp(25px, -63.5681293303px + 11.5473441109vw, 75px);
+  max-width: clamp(400px, 134.2956120092px + 34.6420323326vw, 550px);
+}
+.reviews__content {
+  grid-column: 1/-1;
+  position: relative;
+  line-height: 2.25;
+  font-size: clamp(16px, 8.9145496536px + 0.9237875289vw, 20px);
+  margin-right: 28px;
+}
+@media (max-width: 767px) {
+  .reviews__content {
+    margin-left: 28px;
+  }
+}
+.reviews__content::before, .reviews__content::after {
+  width: 28px;
+  aspect-ratio: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(../images/reviews/quote.svg) center/contain no-repeat;
+}
+.reviews__content::before {
+  right: calc(100% + 20px);
+  top: 0;
+  scale: -1 1;
+}
+@media (max-width: 767px) {
+  .reviews__content::before {
+    right: calc(100% + 10px);
+  }
+}
+.reviews__content::after {
+  left: 100%;
+  bottom: 0;
+}
+.reviews__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.reviews__name {
+  color: var(--color-accent);
+}
+.reviews__post {
+  font-size: 14px;
+  color: #AAAAAA;
+}
+.reviews__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reviews__button {
+  width: 40px;
+  aspect-ratio: 1;
+  border: none;
+  background: none;
+}
+@media (hover: hover) {
+  .reviews__button:hover {
+    opacity: 0.6;
+  }
+  .reviews__button:focus-visible {
+    opacity: 0.6;
+  }
+}
+@media (hover: none) {
+  .reviews__button:active {
+    opacity: 0.6;
+  }
+}
+.reviews__button[disabled] {
+  color: #7B7B7B;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.reviews__button--next {
+  color: var(--color-accent);
+  scale: -1 1;
 }/*# sourceMappingURL=style.css.map */
