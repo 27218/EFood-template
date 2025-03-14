@@ -1,0 +1,18 @@
+.socials {
+	display: flex;
+	column-gap: 13px;
+
+	&__link {
+		@include square(40px);
+		@include flex-center;
+
+		border-radius: 50%;
+		background-color: #EEEEEF;
+		color: #363853;
+
+		@include hover {
+			background-color: #363853;
+			color: #EEEEEF;
+		}
+	}
+}

@@ -1,5 +1,5 @@
 .cta {
-	padding-block: 75px;
+	padding-block: fluid(75, 0, $mobile);
 
 	&__inner {
 		padding: fluid(60, 35, $tablet);
