@@ -771,6 +771,7 @@ input:checked + .burger-button__visuals::after {
 }
 .reviews__name {
   color: var(--color-accent);
+  font-style: normal;
 }
 .reviews__post {
   font-size: 14px;
