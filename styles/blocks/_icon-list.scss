@@ -2,12 +2,12 @@
 	@include flex-column(fluid(25, 15, $tablet));
 	font-size: fluid(24, 18, $tablet);
 
-	&-item {
+	&__item {
 		display: flex;
 		align-items: center;
 		column-gap: 26px;
 	}
-	&-icon {
+	&__icon {
 		@include square(40px);
 	}
 }

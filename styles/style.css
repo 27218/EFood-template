@@ -654,13 +654,13 @@ input:checked + .burger-button__visuals::after {
   row-gap: clamp(15px, -2.7136258661px + 2.3094688222vw, 25px);
   font-size: clamp(18px, 7.3718244804px + 1.3856812933vw, 24px);
 }
-.icon-list-item {
+.icon-list__item {
   display: flex;
   align-items: center;
   -moz-column-gap: 26px;
        column-gap: 26px;
 }
-.icon-list-icon {
+.icon-list__icon {
   width: 40px;
   aspect-ratio: 1;
 }
