@@ -1,0 +1,41 @@
+@keyframes move {
+	from {
+		translate: var(--_starting-translate);
+		opacity: 0;
+	}
+}
+@mixin animation {
+	@media (prefers-reduced-motion: no-preference) { // a11y
+		animation: move ease-in-out both;
+		animation-timeline: view();
+		animation-range: entry 0 entry var(--_boundary);
+	}
+}
+.move {
+	--_starting-translate: 0px 0px;
+	--_boundary: 25vh;
+
+	@include animation;
+
+	&--all {
+		animation: none;
+
+		& > * {
+			@include animation;
+		}
+	}
+
+	&--from-right {--_starting-translate: 75px 0}
+	&--from-left {--_starting-translate: -75px 0}
+	&--from-bottom {--_starting-translate: 0 100px}
+
+	&--boundary-full {
+		--_boundary: 100%;
+	}
+
+	&--without-scroll {
+		@media (prefers-reduced-motion: no-preference) {
+			animation: move 2s ease-in-out both;
+		}
+	}
+}

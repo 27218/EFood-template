@@ -66,7 +66,7 @@
 
 <main class="main">
 	<section class="section container">
-		<div class="section__body section__body--left">
+		<div class="section__body section__body--left | move move--without-scroll move--from-left">
 			<!-- instead of a modifier 'section__title--large' I use h1 (see _globals.scss) -->
 			<h1 class="section__title">Super Fast <span>Food Delivery</span> Service</h1>
 			<p class="section__text">We provide super fast-delivery service. Let’s use our services right now and get discounts of up to 50%</p>
@@ -81,17 +81,17 @@
 
 		<!-- Always specify width & height! By the time the image is loaded, it will already take up the required space -->
 		<!-- btw i took them from the viewBox attribute, not from Figma -->
-		<img class="section__image" src="images/hero.svg" alt="Food delivery man on a motorcycle" width="733" height="682">
+		<img class="section__image | move move--without-scroll move--boundary-full move--from-right" src="images/hero.svg" alt="Food delivery man on a motorcycle" width="733" height="682">
 	</section>
 
 	<section class="section container">
-		<div class="section__body">
+		<div class="section__body | move move--from-bottom">
 			<h2 class="section__title section__title--center">Our Popular <span>Category</span></h2>
 
 			<!-- For a properly implemented tab component, you need to use <button> instead of radio-buttons, and also use JS to switch with arrows. -->
 			<!-- But here I write without JS, so I can :) -->
 			<!-- More details here: https://www.w3.org/WAI/ARIA/apg/patterns/ -->
-			<div class="tabs">
+			<div class="tabs | move move--all move--from-bottom">
 				<div class="tabs__buttons">
 					<label class="tabs__button">
 						<input type="radio" name="tabs" checked>
@@ -302,9 +302,9 @@
 
 	<section class="section container">
 		<!-- You need to crop this image vertically (in Figma) so that it looks good on mobile -->
-		<img class="section__image" width="626" height="600" src="images/stayAtHome/stayAtHome.svg" alt="The delivery man brought the parcel">
+		<img class="section__image | move move--boundary-full move--from-left" width="626" height="600" src="images/stayAtHome/stayAtHome.svg" alt="The delivery man brought the parcel">
 
-		<div class="section__body section__body--right">
+		<div class="section__body section__body--right | move move--all move--from-right">
 			<h2 class="section__title"><span>Stay</span> at home, we will Provide <span>good food</span></h2>
 			<p class="section__text">We provide tasty food and superfast delivery at your home.  Let’s use our services right now and get discounts of up to 50%.</p>
 			<ul class="icon-list">
@@ -327,9 +327,9 @@
 
 	<section class="section container">
 		<div class="section__body">
-			<h2 class="section__title section__title--center">Top food <span>restaurant</span></h2>
+			<h2 class="section__title section__title--center | move move--from-bottom">Top food <span>restaurant</span></h2>
 			
-			<ul class="restaurant">
+			<ul class="restaurant | move move--all move--from-bottom">
 				<li class="restaurant__item">
 					<article class="restaurant__card">
 						<img class="restaurant__image" src="images/restaurant/1.jpg" alt="" width="361" height="299">
@@ -425,7 +425,7 @@
 	</section>
 
 	<section class="section container">
-		<div class="section__body section__body--left">
+		<div class="section__body section__body--left | move move--all move--from-left">
 			<h2 class="section__title">Download Our <span>Mobile App</span></h2>
 			<p class="section__text">It's all at your fingertips -- the restaurants you love. Find the right food to suit your mood, and make the first bite last. Go ahead, download app and get 50% discount</p>
 			<div class="section__buttons">
@@ -440,16 +440,16 @@
 			</div>
 		</div>
 
-		<img class="section__image" width="617" height="481" src="images/download/phones.svg" alt="">
+		<img class="section__image | move move--boundary-full move--from-right" width="617" height="481" src="images/download/phones.svg" alt="">
 	</section>
 
 	<section class="section container">
 		<div class="section__body">
-			<h2 class="section__title section__title--center">What our client are <span>saying</span></h2>
+			<h2 class="section__title section__title--center | move move--from-bottom">What our client are <span>saying</span></h2>
 			
 			<div class="reviews">
-				<img class="reviews__image" src="images/reviews/person.jpg" alt="Angelina Jolie" width="433" height="520">
-				<blockquote class="reviews__body" cite="#">
+				<img class="reviews__image | move move--boundary-full move--from-left" src="images/reviews/person.jpg" alt="Angelina Jolie" width="433" height="520">
+				<blockquote class="reviews__body | move move--boundary-full move--from-right" cite="#">
 					<div class="reviews__content">EFood has the most intriguing food order system in the country. UI in both their app and web Is very simple and easy to use, enhancing the UX. Their delivery men are also quite professional and knows the neighborhood well. Till now I never had to guide them to my address for delivery;</div>
 					<div class="reviews__info">
 						<cite class="reviews__name">Angelina Jolie</cite>
@@ -476,8 +476,8 @@
 		</div>
 	</section>
 
-	<section class="cta container">
-		<div class="cta__inner">
+	<section class="cta container | move move--boundary-full move--from-bottom">
+		<div class="cta__inner | move move--all move--from-bottom">
 			<h2 class="cta__title">Subscribe to get the Latest Offer</h2>
 			<p class="cta__text">Get our daily updates by subscribing to our newspaper, please drop your email below</p>
 			<form class="cta__form" action="#">
